@@ -1,30 +1,45 @@
 # Web Security Scanner
+- A small python project made by me using the knowledge of python and websecurity. 
+- This scanner takes a websites URL sends a request and checks some basic security related data.
 
-This is a small Python project I'm building to learn the basics of web security and how websites respond to requests.
+## Requirements
+- Python 3
+- `requests` library
+Install `requests` with:
+```bash
+pip install requests
+```
 
-## Day 1
+## How to Run
+- open the project folder in vs code and run
 
-Today I started building the scanner using Python and the `requests` library.
+- step 1 python scanner.py
 
-### What I learned
+- step 2 The program will ask:
+  "Enter a website URL:" enter a URL you wanna check
 
-* How to install and import the `requests` library.
-* How to take a website URL as input using `input()`.
-* How to send a GET request to a website.
-* What an HTTP status code is.
-* What a `200` status code means.
-* How to view the headers returned by a website.
-* How to use an `if/else` statement to check if a security header is present.
-* Checked the HSTS (`Strict-Transport-Security`) header.
-* Started checking the `X-Frame-Options` header.
+ - step 3 run the program and then the code will start checking stuff and will return output as
 
-## What I practiced
+    --- Security Scan ---
+    Target: https://example.com
+    Status Code: 200
+     HSTS: Present
+     X-Frame-Options: Missing
+     CSP: Present
 
-I tested the program using `example.com` and GitHub to see how different websites respond.
 
-## Next
 
-I want to add more security-header checks and improve the way the scanner displays the results. 
 
-This project is still in progress, so I'll keep updating it as I learn more.(will update this read me)
+## What It Checks
+- HSTS: 'Strict-Transport-Security' helps tell browsers to use HTTPS when connecting to a website.
+- X-Frame-Options: Controls whether a webpage can be displayed inside a frame or iframe and can help reduce certain clickjacking risks.
+-  Content-Security-Policy: CSP allows a website to define restrictions on the types and sources of content that browsers can load, helping reduce certain types      of attacks such as XSS.CSP allows a website to define restrictions on the types and sources of content that browsers can load, helping reduce certain types of     attacks such as XSS.
+     (helped by AI for definations)
+## Important
+- This is a basic learning project, not a complete security scanner.
+- Only test websites that you own or have permission to test. 
 
+## Project Status
+ - Still learning and improving this project.
+ - More checks and features will be added as I learn more Python, networking, and web security.
+## DATE 21-09-2026
