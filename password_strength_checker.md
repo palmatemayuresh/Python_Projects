@@ -27,3 +27,4 @@ The program takes a password from the user and checks its length, uppercase lett
 I want to make this checker better by adding more password checks and maybe giving suggestions when a password is weak.
 
 *Just a small project, but learned quite a bit while making it.*
+*Going to update it in future*
